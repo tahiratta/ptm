@@ -96,9 +96,9 @@ DATABASES = {
         'PASSWORD': '273b01f3c2385d1b776b8658377f6bfa97f984337a25e3d555214b834c03f8bd',
         'HOST': 'ec2-23-21-186-138.compute-1.amazonaws.com',
         'PORT': '5432',
-        'default': dj_database_url.config(
-         default=config('e-ptm-db')
-    )
+        #'default': dj_database_url.config(
+         #default=config('storefront-db')
+    #)
     }
 }
 
