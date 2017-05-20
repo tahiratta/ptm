@@ -13,8 +13,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-from decouple import config
-import dj_database_url
+#from decouple import config
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -23,16 +22,16 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-SECRET_KEY = config('SECRET_KEY')
-DEBUG = config('DEBUG', default=False, cast=bool)
-EMAIL_HOST = config('EMAIL_HOST', default='localhost')
-EMAIL_PORT = config('EMAIL_PORT', default=25, cast=int)
+#SECRET_KEY = config('SECRET_KEY')
+#DEBUG = config('DEBUG', default=False, cast=bool)
+#EMAIL_HOST = config('EMAIL_HOST', default='localhost')
+#EMAIL_PORT = config('EMAIL_PORT', default=25, cast=int)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 SECRET_KEY = 'gx81)k(ai2iz6y_elfs%ln9@(mo7_ymk!q^o37_t&7n6cr&y2@'
-DATABASE_URL='postgres://glnedxgzfhjlrj:87c5af4b0d5c81d071327304e6d7b2dd3788662307b5556722062cf81b9e4ef6@ec2-54-204-0-88.compute-1.amazonaws.com:5432/dd42lp80p2866f'
+#DATABASE_URL='postgres://glnedxgzfhjlrj:87c5af4b0d5c81d071327304e6d7b2dd3788662307b5556722062cf81b9e4ef6@ec2-54-204-0-88.compute-1.amazonaws.com:5432/dd42lp80p2866f'
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['ptmapis.herokuapp.com']
 
 
 # Application definition
@@ -90,10 +89,10 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         #'NAME': 'HELLO_DJANGO',
-        'USER': 'U_HELLO',
-        'PASSWORD': 'hA8(scA@!fg3*sc&xaGh&6%-l<._&xCf',
-        'HOST': '127.0.0.1',
-        'PORT': '',
+        #'USER': 'U_HELLO',
+        #'PASSWORD': 'hA8(scA@!fg3*sc&xaGh&6%-l<._&xCf',
+        #'HOST': '127.0.0.1',
+        #'PORT': '',
         #'default': dj_database_url.config(
          #default=config('e-ptm-db')
     #)
@@ -136,14 +135,14 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = '/static/'
+#STATIC_URL = '/static/'
 
 # Extra places for collectstatic to find static files.
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+#STATICFILES_DIRS = (
+    #os.path.join(BASE_DIR, 'static'),
+#)
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
