@@ -1,3 +1,4 @@
+django
 gunicorn==19.7.1
 wheel==0.24.0
 whitenoise==3.3.0
