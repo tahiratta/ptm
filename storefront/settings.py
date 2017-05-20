@@ -87,12 +87,12 @@ DATABASES = {
 
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        #'NAME': 'HELLO_DJANGO',
-        #'USER': 'U_HELLO',
-        #'PASSWORD': 'hA8(scA@!fg3*sc&xaGh&6%-l<._&xCf',
-        #'HOST': '127.0.0.1',
-        #'PORT': '',
+        #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': 'd9ieem0tca0j8m',
+        'USER': 'zkezstebqelhsp',
+        'PASSWORD': '273b01f3c2385d1b776b8658377f6bfa97f984337a25e3d555214b834c03f8bd',
+        'HOST': 'ec2-23-21-186-138.compute-1.amazonaws.com',
+        'PORT': '5432',
         #'default': dj_database_url.config(
          #default=config('e-ptm-db')
     #)
