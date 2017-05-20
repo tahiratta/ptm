@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'storefront.wsgi.application'
 DATABASES = {
 
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
         #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         'NAME': 'd9ieem0tca0j8m',
         'USER': 'zkezstebqelhsp',
