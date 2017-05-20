@@ -24,13 +24,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-SECRET_KEY = config('SECRET_KEY')
-DEBUG = config('DEBUG', default=False, cast=bool)
+#SECRET_KEY = config('SECRET_KEY')
+
 #EMAIL_HOST = config('EMAIL_HOST', default='localhost')
 #EMAIL_PORT = config('EMAIL_PORT', default=25, cast=int)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 SECRET_KEY = 'gx81)k(ai2iz6y_elfs%ln9@(mo7_ymk!q^o37_t&7n6cr&y2@'
+DEBUG = config('DEBUG', default=False, cast=bool)
 DATABASE_URL='postgres://jzsxkckovuupps:c98cda161d278c91b612a006a79cfb5717cc1ff3aa96d6fd402ee0c5645aee9d@ec2-23-23-227-188.compute-1.amazonaws.com:5432/dcfr78b46cu44d'
 
 ALLOWED_HOSTS = ['ptmapis.herokuapp.com']
