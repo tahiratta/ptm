@@ -14,6 +14,10 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 #from decouple import config
+from distutils.command.config import config
+
+import config as config
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -22,14 +26,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-#SECRET_KEY = config('SECRET_KEY')
-#DEBUG = config('DEBUG', default=False, cast=bool)
+SECRET_KEY = config('SECRET_KEY')
+DEBUG = config('DEBUG', default=False, cast=bool)
 #EMAIL_HOST = config('EMAIL_HOST', default='localhost')
 #EMAIL_PORT = config('EMAIL_PORT', default=25, cast=int)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 SECRET_KEY = 'gx81)k(ai2iz6y_elfs%ln9@(mo7_ymk!q^o37_t&7n6cr&y2@'
-#DATABASE_URL='postgres://glnedxgzfhjlrj:87c5af4b0d5c81d071327304e6d7b2dd3788662307b5556722062cf81b9e4ef6@ec2-54-204-0-88.compute-1.amazonaws.com:5432/dd42lp80p2866f'
+DATABASE_URL='postgres://jzsxkckovuupps:c98cda161d278c91b612a006a79cfb5717cc1ff3aa96d6fd402ee0c5645aee9d@ec2-23-23-227-188.compute-1.amazonaws.com:5432/dcfr78b46cu44d'
 
 ALLOWED_HOSTS = ['ptmapis.herokuapp.com']
 
@@ -93,9 +97,9 @@ DATABASES = {
         'PASSWORD': '273b01f3c2385d1b776b8658377f6bfa97f984337a25e3d555214b834c03f8bd',
         'HOST': 'ec2-23-21-186-138.compute-1.amazonaws.com',
         'PORT': '5432',
-        #'default': dj_database_url.config(
-         #default=config('e-ptm-db')
-    #)
+        'default': dj_database_url.config(
+         default=config('e-ptm-db')
+    )
     }
 }
 
