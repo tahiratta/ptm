@@ -7,7 +7,7 @@
       <imported>true</imported>
       <remarks>$PROJECT_DIR$/storefront/settings.py</remarks>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://ec2-23-21-186-138.compute-1.amazonaws.com:5432/d9ieem0tca0j8m</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\aa\PycharmProjects\storefront\db.sqlite3</jdbc-url>
     </data-source>
   </component>
 </project>

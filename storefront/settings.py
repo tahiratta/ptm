@@ -14,7 +14,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 #from decouple import config
-from distutils.command.config import config
+#from distutils.command.config import config
 import dj_database_url
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -29,13 +29,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 #EMAIL_HOST = config('EMAIL_HOST', default='localhost')
 #EMAIL_PORT = config('EMAIL_PORT', default=25, cast=int)
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-SECRET_KEY = 'gx81)k(ai2iz6y_elfs%ln9@(mo7_ymk!q^o37_t&7n6cr&y2@'
+DEBUG = False
+#SECRET_KEY = 'gx81)k(ai2iz6y_elfs%ln9@(mo7_ymk!q^o37_t&7n6cr&y2@'
 #DEBUG = config('DEBUG', default=False, cast=bool)
-DATABASE_URL='postgres://jzsxkckovuupps:c98cda161d278c91b612a006a79cfb5717cc1ff3aa96d6fd402ee0c5645aee9d@ec2-23-23-227-188.compute-1.amazonaws.com:5432/dcfr78b46cu44d'
+#DATABASE_URL='postgres://jzsxkckovuupps:c98cda161d278c91b612a006a79cfb5717cc1ff3aa96d6fd402ee0c5645aee9d@ec2-23-23-227-188.compute-1.amazonaws.com:5432/dcfr78b46cu44d'
 
 #ALLOWED_HOSTS = ['ptmapis.herokuapp.com']
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['anothertry.herokuapp.com']
 
 # Application definition
 
@@ -86,6 +86,18 @@ WSGI_APPLICATION = 'storefront.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
+# keep this
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
+
+# add this
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
+'''
 DATABASES = {
 
     'default': {
@@ -101,7 +113,7 @@ DATABASES = {
     #)
     }
 }
-
+'''
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
